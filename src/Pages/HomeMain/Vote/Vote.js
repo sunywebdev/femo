@@ -18,18 +18,14 @@ const Vote = () => {
 		<Container sx={{ py: 9, mx: "auto" }}>
 			<Box sx={{ color: "white", textAlign: "center" }}>
 				<Typography variant='h5' sx={{ fontWeight: "bold" }}>
-					Time To Vote Again In
+					Time to vote again in
 				</Typography>
 				<Typography variant='h2' sx={{ fontWeight: "bold", mb: 3 }}>
 					<span>{days}</span>:<span>{hours}</span>:<span>{minutes}</span>:
 					<span>{seconds}</span>
 				</Typography>
 			</Box>
-			<Grid
-				container
-				spacing={3}
-				alignItems='center'
-				justifyContent='center'>
+			<Grid container spacing={3} alignItems='center' justifyContent='center'>
 				<Grid item md={3} sm={6} xs={12}>
 					<Paper
 						onClick={() => {

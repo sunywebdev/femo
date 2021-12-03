@@ -1,7 +1,7 @@
 import { Button, Container, IconButton, Typography } from "@mui/material";
 import { Box } from "@mui/system";
 import React from "react";
-import { FaDiscord, FaFacebookF } from "react-icons/fa";
+import { FaDiscord, FaFacebookF, FaMailBulk, FaYoutube } from "react-icons/fa";
 
 const Footer = () => {
 	return (
@@ -10,7 +10,10 @@ const Footer = () => {
 				<Box sx={{ my: 1 }}>
 					<IconButton
 						onClick={() =>
-							window.open("https://www.facebook.com/FemoHG", "_blank")
+							window.open(
+								"https://www.facebook.com/groups/311433169408783",
+								"_blank",
+							)
 						}
 						component='span'
 						sx={{
@@ -37,6 +40,41 @@ const Footer = () => {
 							},
 						}}>
 						<FaDiscord style={{ color: "white" }} size={25} />
+					</IconButton>
+					<IconButton
+						onClick={() =>
+							window.open(
+								"https://www.youtube.com/c/FEMOHiddenGamers?sub_confirmation=1",
+								"_blank",
+							)
+						}
+						component='span'
+						sx={{
+							backgroundColor: "#FF0000",
+							mx: 1,
+							"&:hover": {
+								backgroundColor: "#FF0000",
+								cursor:
+									"url(https://ani.cursors-4u.net/games/gam-16/gam1545.cur), auto",
+							},
+						}}>
+						<FaYoutube style={{ color: "white" }} size={25} />
+					</IconButton>
+					<IconButton
+						onClick={() =>
+							window.open("mailto:femohiddengamers@gmail.com", "_blank")
+						}
+						component='span'
+						sx={{
+							backgroundColor: "#EE4436",
+							mx: 1,
+							"&:hover": {
+								backgroundColor: "#EE4436",
+								cursor:
+									"url(https://ani.cursors-4u.net/games/gam-16/gam1545.cur), auto",
+							},
+						}}>
+						<FaMailBulk style={{ color: "white" }} size={25} />
 					</IconButton>
 				</Box>
 				<Typography variant='h5' sx={{ fontWeight: "bold", color: "white" }}>
