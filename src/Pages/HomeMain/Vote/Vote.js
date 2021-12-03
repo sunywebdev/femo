@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Grid from "@mui/material/Grid";
 import { CardMedia, Container, Paper, Typography } from "@mui/material";
 import image1 from "../../../images/1.png";
@@ -8,6 +8,7 @@ import { Box } from "@mui/system";
 import { useTimer } from "react-timer-hook";
 
 const Vote = () => {
+	const [timer, setTimer] = useState(false);
 	const time = new Date();
 	time.setSeconds(time.getSeconds() + 600);
 	const { seconds, minutes, hours, days, restart } = useTimer({
@@ -16,15 +17,17 @@ const Vote = () => {
 	});
 	return (
 		<Container sx={{ py: 9, mx: "auto" }}>
-			<Box sx={{ color: "white", textAlign: "center" }}>
-				<Typography variant='h5' sx={{ fontWeight: "bold" }}>
-					Time to vote again in
-				</Typography>
-				<Typography variant='h2' sx={{ fontWeight: "bold", mb: 3 }}>
-					<span>{days}</span>:<span>{hours}</span>:<span>{minutes}</span>:
-					<span>{seconds}</span>
-				</Typography>
-			</Box>
+			{timer && (
+				<Box sx={{ color: "white", textAlign: "center" }}>
+					<Typography variant='h5' sx={{ fontWeight: "bold" }}>
+						Time to vote again in
+					</Typography>
+					<Typography variant='h2' sx={{ fontWeight: "bold", mb: 3 }}>
+						<span>{days}</span>:<span>{hours}</span>:<span>{minutes}</span>:
+						<span>{seconds}</span>
+					</Typography>
+				</Box>
+			)}
 			<Grid container spacing={3} alignItems='center' justifyContent='center'>
 				<Grid item md={3} sm={6} xs={12}>
 					<Paper
@@ -33,6 +36,7 @@ const Vote = () => {
 							time.setSeconds(time.getSeconds() + 86400);
 							restart(time);
 							window.open("https://discord.gg/Y5dGhmQq", "_blank");
+							setTimer(true);
 						}}
 						elevation={5}
 						sx={{
@@ -79,6 +83,7 @@ const Vote = () => {
 							time.setSeconds(time.getSeconds() + 86400);
 							restart(time);
 							window.open("https://discord.gg/Y5dGhmQq", "_blank");
+							setTimer(true);
 						}}
 						elevation={5}
 						sx={{
@@ -126,6 +131,7 @@ const Vote = () => {
 							time.setSeconds(time.getSeconds() + 86400);
 							restart(time);
 							window.open("https://discord.gg/Y5dGhmQq", "_blank");
+							setTimer(true);
 						}}
 						elevation={5}
 						sx={{
