@@ -1,11 +1,11 @@
-import { Container, IconButton, Typography } from "@mui/material";
+import { Button, Container, IconButton, Typography } from "@mui/material";
 import { Box } from "@mui/system";
 import React from "react";
 import { FaDiscord, FaFacebookF } from "react-icons/fa";
 
 const Footer = () => {
 	return (
-		<Container sx={{ mt: 7, minWidth: "100%", py: 5 }}>
+		<Container sx={{ minWidth: "100%", py: 5 }}>
 			<Box sx={{ mx: "auto" }}>
 				<Box sx={{ my: 1 }}>
 					<IconButton
@@ -18,6 +18,8 @@ const Footer = () => {
 							mx: 1,
 							"&:hover": {
 								backgroundColor: "#0674E7",
+								cursor:
+									"url(https://ani.cursors-4u.net/games/gam-16/gam1545.cur), auto",
 							},
 						}}>
 						<FaFacebookF style={{ color: "white" }} size={25} />
@@ -30,6 +32,8 @@ const Footer = () => {
 							mx: 1,
 							"&:hover": {
 								backgroundColor: "#5662F6",
+								cursor:
+									"url(https://ani.cursors-4u.net/games/gam-16/gam1545.cur), auto",
 							},
 						}}>
 						<FaDiscord style={{ color: "white" }} size={25} />
@@ -39,9 +43,24 @@ const Footer = () => {
 					FEMO HIDDEN GAMERS
 				</Typography>
 				<Typography variant='body' sx={{ fontWeight: "bold", color: "white" }}>
-					@2021 All Roght Reserved
+					&copy; 2021 All Right Reserved
 				</Typography>
 			</Box>
+			<Typography variant='body2' sx={{ fontWeight: "bold", color: "white" }}>
+				Developer:
+				<Button
+					sx={{
+						color: "#0E5DCA",
+						fontWeight: "bold",
+						cursor:
+							"url(https://cur.cursors-4u.net/toons/too-7/too666.cur), auto",
+					}}
+					onClick={() =>
+						window.open("https://sunywebdev.netlify.app/", "_blank")
+					}>
+					sunywebdev
+				</Button>
+			</Typography>
 		</Container>
 	);
 };

@@ -1,5 +1,6 @@
 .App {
 	text-align: center;
 	background-image: url(./images/bg.jpg);
-  background-size: cover;
+	background-size: cover;
+	cursor: url(https://ani.cursors-4u.net/games/gam-16/gam1556.cur), auto;
 }
