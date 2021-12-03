@@ -15,8 +15,8 @@ const Vote = () => {
 		onExpire: () => console.warn("onExpire called"),
 	});
 	return (
-		<Container sx={{ py: 9 }}>
-			<Box sx={{ color: "white" }}>
+		<Container sx={{ py: 9, mx: "auto" }}>
+			<Box sx={{ color: "white", textAlign: "center" }}>
 				<Typography variant='h5' sx={{ fontWeight: "bold" }}>
 					Time To Vote Again In
 				</Typography>
@@ -25,8 +25,12 @@ const Vote = () => {
 					<span>{seconds}</span>
 				</Typography>
 			</Box>
-			<Grid container spacing={2}>
-				<Grid item md={4} sm={6} xs={12}>
+			<Grid
+				container
+				spacing={3}
+				alignItems='center'
+				justifyContent='center'>
+				<Grid item md={3} sm={6} xs={12}>
 					<Paper
 						onClick={() => {
 							const time = new Date();
@@ -48,7 +52,11 @@ const Vote = () => {
 						<Box sx={{ position: "relative" }}>
 							<CardMedia
 								component='img'
-								sx={{ width: "100%", height: "100%", borderRadius: 3 }}
+								sx={{
+									width: "100%",
+									height: "100%",
+									borderRadius: 3,
+								}}
 								image={image1}
 								alt=''
 							/>
@@ -59,6 +67,7 @@ const Vote = () => {
 									top: "50%",
 									transform: "translate(-50%, -50%)",
 									color: "white",
+									textShadow: "4px 4px 7px rgba(0,0,0,0.68)",
 								}}>
 								<Typography variant='h2' sx={{ fontWeight: "bold" }}>
 									VOTE
@@ -67,7 +76,7 @@ const Vote = () => {
 						</Box>
 					</Paper>
 				</Grid>
-				<Grid item md={4} sm={6} xs={12}>
+				<Grid item md={3} sm={6} xs={12}>
 					<Paper
 						onClick={() => {
 							const time = new Date();
@@ -90,7 +99,11 @@ const Vote = () => {
 						<Box sx={{ position: "relative" }}>
 							<CardMedia
 								component='img'
-								sx={{ width: "100%", height: "100%", borderRadius: 3 }}
+								sx={{
+									width: "100%",
+									height: "100%",
+									borderRadius: 3,
+								}}
 								image={image2}
 								alt=''
 							/>
@@ -101,6 +114,7 @@ const Vote = () => {
 									top: "50%",
 									transform: "translate(-50%, -50%)",
 									color: "white",
+									textShadow: "4px 4px 7px rgba(0,0,0,0.68)",
 								}}>
 								<Typography variant='h2' sx={{ fontWeight: "bold" }}>
 									VOTE
@@ -109,7 +123,7 @@ const Vote = () => {
 						</Box>
 					</Paper>
 				</Grid>
-				<Grid item md={4} sm={6} xs={12}>
+				<Grid item md={3} sm={6} xs={12}>
 					<Paper
 						onClick={() => {
 							const time = new Date();
@@ -132,7 +146,11 @@ const Vote = () => {
 						<Box sx={{ position: "relative" }}>
 							<CardMedia
 								component='img'
-								sx={{ width: "100%", height: "100%", borderRadius: 3 }}
+								sx={{
+									width: "100%",
+									height: "100%",
+									borderRadius: 3,
+								}}
 								image={image3}
 								alt=''
 							/>
@@ -143,6 +161,7 @@ const Vote = () => {
 									top: "50%",
 									transform: "translate(-50%, -50%)",
 									color: "white",
+									textShadow: "4px 4px 7px rgba(0,0,0,0.68)",
 								}}>
 								<Typography variant='h2' sx={{ fontWeight: "bold" }}>
 									VOTE
