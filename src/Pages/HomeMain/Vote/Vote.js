@@ -5,38 +5,20 @@ import image1 from "../../../images/1.png";
 import image2 from "../../../images/2.png";
 import image3 from "../../../images/3.png";
 import { Box } from "@mui/system";
-import { useTimer } from "react-timer-hook";
+import { FaCheck } from "react-icons/fa";
 
 const Vote = () => {
-	const [timer, setTimer] = useState(false);
-	const time = new Date();
-	time.setSeconds(time.getSeconds() + 600);
-	const { seconds, minutes, hours, days, restart } = useTimer({
-		time,
-		onExpire: () => console.warn("onExpire called"),
-	});
+	const [done1, setDone1] = useState("Vote");
+	const [done2, setDone2] = useState("Vote");
+	const [done3, setDone3] = useState("Vote");
 	return (
 		<Container sx={{ py: 9, mx: "auto" }}>
-			{timer && (
-				<Box sx={{ color: "white", textAlign: "center" }}>
-					<Typography variant='h5' sx={{ fontWeight: "bold" }}>
-						Time to vote again in
-					</Typography>
-					<Typography variant='h2' sx={{ fontWeight: "bold", mb: 3 }}>
-						<span>{days}</span>:<span>{hours}</span>:<span>{minutes}</span>:
-						<span>{seconds}</span>
-					</Typography>
-				</Box>
-			)}
 			<Grid container spacing={3} alignItems='center' justifyContent='center'>
 				<Grid item md={3} sm={6} xs={12}>
 					<Paper
 						onClick={() => {
-							const time = new Date();
-							time.setSeconds(time.getSeconds() + 86400);
-							restart(time);
 							window.open("https://discord.gg/Y5dGhmQq", "_blank");
-							setTimer(true);
+							setDone1("Done");
 						}}
 						elevation={5}
 						sx={{
@@ -69,8 +51,9 @@ const Vote = () => {
 									color: "white",
 									textShadow: "4px 4px 7px rgba(0,0,0,0.68)",
 								}}>
+								{done1 === "Done" && <FaCheck size={55} />}
 								<Typography variant='h2' sx={{ fontWeight: "bold" }}>
-									VOTE
+									{done1}
 								</Typography>
 							</Box>
 						</Box>
@@ -79,11 +62,8 @@ const Vote = () => {
 				<Grid item md={3} sm={6} xs={12}>
 					<Paper
 						onClick={() => {
-							const time = new Date();
-							time.setSeconds(time.getSeconds() + 86400);
-							restart(time);
 							window.open("https://discord.gg/Y5dGhmQq", "_blank");
-							setTimer(true);
+							setDone2("Done");
 						}}
 						elevation={5}
 						sx={{
@@ -117,8 +97,9 @@ const Vote = () => {
 									color: "white",
 									textShadow: "4px 4px 7px rgba(0,0,0,0.68)",
 								}}>
+								{done2 === "Done" && <FaCheck size={55} />}
 								<Typography variant='h2' sx={{ fontWeight: "bold" }}>
-									VOTE
+									{done2}
 								</Typography>
 							</Box>
 						</Box>
@@ -127,11 +108,8 @@ const Vote = () => {
 				<Grid item md={3} sm={6} xs={12}>
 					<Paper
 						onClick={() => {
-							const time = new Date();
-							time.setSeconds(time.getSeconds() + 86400);
-							restart(time);
 							window.open("https://discord.gg/Y5dGhmQq", "_blank");
-							setTimer(true);
+							setDone3("Done");
 						}}
 						elevation={5}
 						sx={{
@@ -165,8 +143,9 @@ const Vote = () => {
 									color: "white",
 									textShadow: "4px 4px 7px rgba(0,0,0,0.68)",
 								}}>
+								{done3 === "Done" && <FaCheck size={55} />}
 								<Typography variant='h2' sx={{ fontWeight: "bold" }}>
-									VOTE
+									{done3}
 								</Typography>
 							</Box>
 						</Box>
