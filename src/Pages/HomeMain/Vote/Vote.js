@@ -17,7 +17,10 @@ const Vote = () => {
 				<Grid item md={3} sm={6} xs={12}>
 					<Paper
 						onClick={() => {
-							window.open("https://discord.gg/Y5dGhmQq", "_blank");
+							window.open(
+								"http://topminecraftservers.org/vote/23646",
+								"_blank",
+							);
 							setDone1("Done");
 						}}
 						elevation={5}
@@ -62,7 +65,10 @@ const Vote = () => {
 				<Grid item md={3} sm={6} xs={12}>
 					<Paper
 						onClick={() => {
-							window.open("https://discord.gg/Y5dGhmQq", "_blank");
+							window.open(
+								"https://minecraft-mp.com/server/297225/vote/",
+								"_blank",
+							);
 							setDone2("Done");
 						}}
 						elevation={5}
@@ -108,7 +114,10 @@ const Vote = () => {
 				<Grid item md={3} sm={6} xs={12}>
 					<Paper
 						onClick={() => {
-							window.open("https://discord.gg/Y5dGhmQq", "_blank");
+							window.open(
+								"https://topg.org/minecraft-servers/server-637891",
+								"_blank",
+							);
 							setDone3("Done");
 						}}
 						elevation={5}
